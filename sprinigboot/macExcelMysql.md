@@ -30,6 +30,13 @@ load data local infile "/Users/zhjwang/11a.csv" into table 11_applyf_apply field
 ```
 逗号表示csv文件是以“，”分割的，lines terminated by "\r\n";表示csv文件是以这个换行的。
 
-**注意：可能出错，使用这个解决：mysql --local-infile -u user -ppasswd**
+**注意：可能出错 **
+
+```
+ERROR 1045 (28000): Access denied for user 'user'@'localhost' (using password: YES)
+使用这个解决：mysql --local-infile -u user -p
+
+```
+
 
 如果出现ok，就表示成功。可以使用```select * from tableName```来查看是否导入正确。
