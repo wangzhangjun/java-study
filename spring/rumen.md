@@ -140,3 +140,7 @@ spring 是个容器框架，可以配置各种bean（action/service/domain/dao�
 
 控制反转，把创建对象（bean），和维护对象（bean）之间的关系的权利从程序中转移到spring的容器文件（ApplicationContext）中。
 DI:实际上和ioc是同一个概念，spring的开发者认为di更准确的表示spring的核心技术。
+
+
+### 6.mvc到底表示的是啥
+model层是一个很大的概念（业务层+dao层+持久化层）
