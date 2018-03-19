@@ -12,4 +12,5 @@
     * [spring入门](spring/rumen.md)
     * [spring配合DI](spring/di.md)
     * [springApplicationContext与bean工厂的区别](spring/beanFactory.md)
+    * [bean的生命周期](spring/beanTime.md)
 
