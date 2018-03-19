@@ -11,12 +11,11 @@
 ```
 public class HelloWorld implements BeanNameAware {
     private String message;
-
     public void getMessage() {
         System.out.println("Your Message : " + message);
     }
 
-    public void setMessage(String message) {
+    public void setMessage(String message) {M
         this.message = message;
     }
 
@@ -111,12 +110,21 @@ public class HelloWorldConfig {
         return new HelloWorld();
     }
 ```
+也可以使用这种配置方式(和上面的方式一样，只是在不同的地方加不同的注解)
+```
+@PostConstruct
+    public void init(){
+        System.out.println("我是HelloWorld的init方法");
+    }
+```
 
 ### 9.如果bean和一个后置处理器关联，则会自动调用用postProcessAfterInitialization
 ### 10.使用bean
 ### 11.关闭容器，可以自己定义关闭动作
 ```
 @Bean(destroyMethod = "")
+或者
+@PreDestory
 ```
 
 ### 12.总结
