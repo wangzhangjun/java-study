@@ -14,3 +14,5 @@
     * [springApplicationContext与bean工厂的区别](spring/beanFactory.md)
     * [bean的生命周期](spring/beanTime.md)
     * [装配bean](spring/beanzhuangpei.md)
+    * [装配bean2](spring/beanzhuangpei2.md)
+
