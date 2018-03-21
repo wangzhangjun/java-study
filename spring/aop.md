@@ -111,3 +111,46 @@ ApplicationContext ac = new AnnotationConfigApplicationContext(AopConfig.class);
 * 1.在切面类（为切点服务的类）前用@Aspect注释修饰，声明为一个切面类。
 * 2.用@Pointcut注释声明一个切点，目的是为了告诉切面，谁是它的服务对象。（表示在谁之前或者之后要干个什么事）
 * 3.@EnableAspectJAutoProxy开启自动代理。（相当于实现了上面的代理类）
+
+### 4.其他的通知
+类似的还有after.around等通知类型，如果使用xml配置的方式。
+那么你需要再去实现after的相关接口，然后在xml文件中进行配置
+![](assets/markdown-img-paste-20180321154903594.png)
+但是当你使用注解的方式时，直接使用
+```
+@After(EDP)
+public void sayBye(){
+    System.out.println("注解类型后置通知");
+}
+```
+**什么是环绕通知**
+在执行目标对象的前和后，给你一个机会，做aop.
+```
+//    @Around(EDP)
+//    public void  sayAround(ProceedingJoinPoint proceedingJoinPoint){
+//        try {
+//            System.out.println("around前");
+//            proceedingJoinPoint.proceed();
+//            System.out.println("around后");
+//        }catch (Throwable e ){
+//            System.out.println("error");
+//        }
+//
+//    }
+//异常通知
+    @AfterThrowing(pointcut = EDP, throwing = "ex")
+    public void afterThrowing(JoinPoint joinPoint, Exception ex){
+
+        String methodName = joinPoint.getSignature().getName();
+        System.out.println("异常通知方法"+methodName + "发生异常" + ex);
+
+    }
+```
+
+### 5.总结
+
+spring的AOP中，当你通过代理对象去实现aop技术的时候，获取的proxyFactorybean是什么类型？
+答：返回的是一个代理对象。如果目标对象实现了接口，则spring使用的是jdk的动态代理技术完成。如果目标对象没有实现接口，则spring使用的是CHLIB技术完成。
+
+定义切入点的支持正则表达式：
+![](assets/markdown-img-paste-20180321164603690.png)
