@@ -15,4 +15,5 @@
     * [bean的生命周期](spring/beanTime.md)
     * [装配bean](spring/beanzhuangpei.md)
     * [装配bean2](spring/beanzhuangpei2.md)
+    * [AOP编程](spring/aop.md)
 
