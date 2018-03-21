@@ -44,3 +44,70 @@
 举个例子：
 比如上面我们在aop里面配置了testService，里面右边两个方法，一个是sayHello,一个是sayBye().这个时候这两个函数都是连接点，但是如果我们指定只是在sayHello之前写日志，那么sayHello就成为了切入点，而sayBye永远都只是连接点。
 ```
+
+### 3.举个例子，用注解实现aop
+一个简单的类
+```
+package com.study.spring.aop;
+
+
+public class Knight {
+
+    public void saying(){
+        System.out.println("我是一个骑士");
+    }
+}
+
+```
+定义一个切面
+```
+package com.study.spring.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+
+@Aspect
+public class AspectTest {
+
+    public static final String EDP = "execution(* com.study.spring.aop.Knight.saying(..))";
+
+    @Before(EDP)
+    public void sayHello(){
+        System.out.println("注解类型前置通知");
+    }
+}
+
+```
+配置
+```
+package com.study.spring.aop;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@Configuration
+@EnableAspectJAutoProxy
+public class AopConfig {
+
+    @Bean
+    public AspectTest aspectTest(){
+        return new AspectTest();
+    }
+
+    @Bean
+    public Knight knight(){
+        return new Knight();
+    }
+}
+
+```
+使用
+```
+ApplicationContext ac = new AnnotationConfigApplicationContext(AopConfig.class);
+        ac.getBean(Knight.class).saying();
+```
+说明：
+* 1.在切面类（为切点服务的类）前用@Aspect注释修饰，声明为一个切面类。
+* 2.用@Pointcut注释声明一个切点，目的是为了告诉切面，谁是它的服务对象。（表示在谁之前或者之后要干个什么事）
+* 3.@EnableAspectJAutoProxy开启自动代理。（相当于实现了上面的代理类）
