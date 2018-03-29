@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [技术积累](technology/README.md)
     * [java获取键盘输入值](technology/keyboard.md)
+    * [java中equals方法和==](technology/equals.md)
 * [springboot](sprinigboot/README.md)
     * [springboot解决跨域问题](sprinigboot/cros.md)
     * [springboot实现excel导入](sprinigboot/excel.md)
