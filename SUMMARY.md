@@ -1,6 +1,11 @@
 # Summary
 
 * [Introduction](README.md)
+* [java基础知识](basic/README.md)
+    * [java继承](basic/inhert.md)
+    * [java继承中的构造方法](basic/inhert-constructor.md)
+    * [java方法重写与重载](basic/override.md)
+    * [final关键字](basic/final.md)
 * [技术积累](technology/README.md)
     * [java获取键盘输入值](technology/keyboard.md)
     * [java中equals方法和==](technology/equals.md)
