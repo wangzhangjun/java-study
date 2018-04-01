@@ -6,6 +6,7 @@
     * [java继承中的构造方法](basic/inhert-constructor.md)
     * [java方法重写与重载](basic/override.md)
     * [final关键字](basic/final.md)
+    * [equals和hashcode方法](basic/equals_hashcode.md)
 * [技术积累](technology/README.md)
     * [java获取键盘输入值](technology/keyboard.md)
     * [java中equals方法和==](technology/equals.md)
