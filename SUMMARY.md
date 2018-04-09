@@ -9,7 +9,7 @@
     * [equals和hashcode方法](basic/equals_hashcode.md)
     * [接口的中使用泛型定义参数和返回值](basic/interface_method.md)
     * [接口做函数形参](basic/interface_param.md)
-    * [java中的枚举](basic/enum.md)
+    * [java中的枚举](basic/enumuse.md)
 * [技术积累](technology/README.md)
     * [java获取键盘输入值](technology/keyboard.md)
     * [java中equals方法和==](technology/equals.md)
