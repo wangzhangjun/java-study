@@ -91,6 +91,7 @@ public enum Color {
         return this.index+"_"+this.name;  
     }  
 }
+
 ```
 ### 4.枚举实现接口
 ```
