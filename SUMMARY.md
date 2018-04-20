@@ -10,6 +10,7 @@
     * [接口的中使用泛型定义参数和返回值](basic/interface_method.md)
     * [接口做函数形参](basic/interface_param.md)
     * [java中的枚举](basic/enumuse.md)
+    * [java单元测试mock](basic/单元测试Mock.md)
 * [技术积累](technology/README.md)
     * [java获取键盘输入值](technology/keyboard.md)
     * [java中equals方法和==](technology/equals.md)
