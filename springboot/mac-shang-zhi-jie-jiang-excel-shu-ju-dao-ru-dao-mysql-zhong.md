@@ -37,7 +37,7 @@ create table 11_apply
 
   逗号表示csv文件是以“，”分割的，lines terminated by "\r\n";表示csv文件是以这个换行的。
 
-**注意：可能出错 **
+**注意：可能出错** 
 
 ```text
 ERROR 1045 (28000): Access denied for user 'user'@'localhost' (using password: YES)

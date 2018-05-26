@@ -19,14 +19,15 @@
   * [springboot实现excel导入](springboot/springboot-shi-xian-excel-dao-ru.md)
   * [Mac上直接将excel数据导入到mysql中](springboot/mac-shang-zhi-jie-jiang-excel-shu-ju-dao-ru-dao-mysql-zhong.md)
 * [spring](spring/README.md)
-    * [反射机制](spring/fanshe.md)
-    * [spring入门](spring/rumen.md)
-    * [spring配合DI](spring/di.md)
-    * [springApplicationContext与bean工厂的区别](spring/beanFactory.md)
-    * [bean的生命周期](spring/beanTime.md)
-    * [装配bean](spring/beanzhuangpei.md)
-    * [装配bean2](spring/beanzhuangpei2.md)
-    * [AOP编程](spring/aop.md)
-* [springData](springData/README.md)
-    * [原始的JDBC](springData/原始的JDBC.md)
-    * [Repository接口](springData/Repository接口.md)
+  * 反射机制
+  * spring入门
+  * spring配合DI
+  * springApplicationContext与bean工厂的区别
+  * bean的生命周期
+  * 装配bean
+  * 装配bean2
+  * AOP编程
+* [springData](springdata/README.md)
+  * [原始的JDBC](springdata/yuan-shi-de-jdbc.md)
+  * [Repository接口](springdata/repository-jie-kou.md)
+

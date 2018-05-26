@@ -2,8 +2,9 @@
 
 会发现有很多重复的代码。开发效率低下。
 
-### 1.获取connection
-```
+## 1.获取connection
+
+```text
 public static Connection getConnection() throws Exception{
         InputStream inputStream = JDBCUtil.class.getClassLoader().getResourceAsStream("db.properties");
         Properties properties = new Properties();
@@ -20,8 +21,9 @@ public static Connection getConnection() throws Exception{
     }
 ```
 
-### 2.释放connection
-```
+## 2.释放connection
+
+```text
 public static void release(ResultSet resultSet, Statement statement, Connection connection)
     {
         if(resultSet != null) {
@@ -51,8 +53,9 @@ public static void release(ResultSet resultSet, Statement statement, Connection 
     }
 ```
 
-### 3.查询和插入
-```
+## 3.查询和插入
+
+```text
 package dao;
 
 import domain.Student;
@@ -66,7 +69,8 @@ public interface StudentDao {
     public void save(Student student);
 }
 ```
-```
+
+```text
 package dao;
 
 import domain.Student;
@@ -134,3 +138,4 @@ public class StudentDaoImpl implements StudentDao {
     }
 }
 ```
+
