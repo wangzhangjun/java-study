@@ -1,0 +1,132 @@
+div {
+    font-family: MyFont;
+}
+body{
+    color: #337ab7;
+}
+
+.course-main {
+    color: #337ab7;
+}
+
+.class-nav {
+    background-color: #f8f8f9;
+}
+
+.class-course {
+    /* background-color: blue; */
+    font-size: 20px;
+    padding-right: 0px;
+}
+
+.course-table {
+    border: solid 2px #cadcea;
+    height: 100px;
+}
+
+.class-course .table-bordered {
+    /* border: 1px solid #ddd; */
+    border: 1px;
+}
+
+.table-header th {
+    text-align: center;
+}
+
+td {
+    height: 60px;
+}
+
+th {
+    padding: 20px;
+}
+
+
+.feature {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 54px;
+}
+.printer-btn {
+    border: solid 2px #dde2e8;
+    border-radius: 21px;
+    height: 50px;
+    padding: 10px 50px;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.printer-btn:hover {
+    border-color: #2057AC;
+    transition: all 250ms ease-in-out;
+}
+
+.fileinput-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: solid 2px #dde2e8;
+    border-radius: 34px;
+    padding: 1px 50px;
+    font-size: 20px;
+    height: 50px;
+    padding: 10px 50px;
+
+}
+
+.fileinput-button:hover {
+    border-color: #2057AC;
+    transition: all 250ms ease-in-out;
+}
+
+.fileinput-button input {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+}
+
+.upload-button {
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+    color: #337ab7;
+}
+
+.upload-file {
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    color: #337ab7;
+}
+
+.main {
+    display: flex;
+}
+
+.class-nav img {
+    height: 549px;
+    width: 764px;
+    margin-left: 388px;
+    opacity: 0.8;
+}
+
+.left{
+    margin-left: -15px;
+    margin-top: -500px;
+    margin-bottom: 250px;
+}
+.left .item {
+    color: #3379b7;
+}
+.select-width {
+    width: 200px;
+}
+
+.class-course table{
+    border: solid 2px #337ab7;
+}

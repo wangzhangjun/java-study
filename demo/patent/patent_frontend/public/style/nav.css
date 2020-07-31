@@ -1,0 +1,40 @@
+.navbar-collapse {
+  margin-top: 10px;
+  border-bottom: solid 1px #f0f0f0;
+}
+
+.navbar-nav a{
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.navbar-expand-lg {
+  background-color: #ffffff;
+  margin-bottom: 0;
+}
+.nav-item{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.navbar-brand {
+  margin-right: -12px;
+  padding: 15px 15px;
+}
+
+.active{
+  opacity: 0.6;
+}
+
+a{
+  font-size: 18px;
+  color: #f1ad4d;
+}
+
+a:hover{
+  opacity: 0.6;
+  color: #f1ad4d;
+}

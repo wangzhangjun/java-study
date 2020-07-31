@@ -1,0 +1,68 @@
+body {
+    margin: auto;
+    font-family: serif;
+    font-size: 20px;
+    font-family: MyFont;
+}
+
+.app-container{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    background-color: #e7e8ea;
+    height: 650px;
+}
+
+.left-form {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 140px;
+}
+
+.one-line{
+    display: inline;
+}
+
+.item {
+    display: inline-block;
+    margin: 15px;
+}
+
+.select-width {
+    width: 170px;
+    color: #3379b7;
+}
+
+.select-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 65%;
+    margin-top: 140px;
+}
+
+.info {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px #f1ad4d;
+    margin: 15px;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+img{
+    height: auto;
+}
+
+.submit button{
+    width: 300px;
+    top: 423px;
+    position: absolute;
+    height: 50px;
+    border-radius: 35px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
