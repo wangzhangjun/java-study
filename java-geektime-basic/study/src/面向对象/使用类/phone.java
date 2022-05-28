@@ -6,5 +6,5 @@ public class phone {
     double price;
     boolean hasFigurePrintUnlocker;
 
-    phone ph;
+    phone ph;  //在类中包含自己，为什么是可以的？因为编译时可以找到Phone。所以编译不报错
 }
