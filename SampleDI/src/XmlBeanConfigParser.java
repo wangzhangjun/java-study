@@ -37,8 +37,6 @@ public class XmlBeanConfigParser {
                     System.out.println(secondElement.getAttribute("type"));
                     System.out.println(secondElement.getAttribute("value"));
                 }
-
-                System.out.println(element.getElementsByTagName("constructor-arg"));
             }
 
         }catch (Exception e) {
