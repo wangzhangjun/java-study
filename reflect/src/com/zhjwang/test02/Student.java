@@ -16,8 +16,8 @@ public class Student extends Person implements MyInterface{
     }
     @Override
     @MyAnnotation(value="himethod1")
-    public void myMythod() {
-        System.out.println("override mythod");
+    public void myMythod() throws RuntimeException{
+        System.out.println("override mythod test");
     }
 
     void happy(){
