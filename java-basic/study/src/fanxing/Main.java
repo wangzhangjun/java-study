@@ -1,5 +1,7 @@
 package fanxing;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         ProductGetter<String> stringProductGetter = new ProductGetter<>();
@@ -20,5 +22,30 @@ public class Main {
         }
 
         System.out.println(integerProductGetter.GetProduct());
+
+        System.out.println("=============泛型方法=============");
+
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("apple");
+        arrayList.add("huawei");
+        arrayList.add("chuanyin");
+        System.out.println(stringProductGetter.GetProduct(arrayList));
+
+        //这就是泛型方法的好处，虽然stringProductGetter这个类是实例化为String类型的。
+        //但是我还是可以传进去int的
+        ArrayList<Integer> arrayList1 = new ArrayList<>();
+        arrayList1.add(100);
+        arrayList1.add(300);
+        arrayList1.add(400);
+        System.out.println(stringProductGetter.GetProduct(arrayList1));
+
+
+        System.out.println("===========静态泛型方法===============");
+        ProductGetter.printType(100, "jva", true);
+
+        System.out.println("===============可变参数==============");
+        ProductGetter.print(1,2,3,4,5,"string");
+
+
     }
 }
