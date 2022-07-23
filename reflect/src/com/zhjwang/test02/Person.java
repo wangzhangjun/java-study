@@ -1,6 +1,8 @@
 package com.zhjwang.test02;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
     private int age;
     public String name;
     private void eat(){
