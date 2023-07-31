@@ -7,6 +7,71 @@ import org.objectweb.asm.Opcodes;
 import utils.FileUtils;
 
 // 通过这个例子，来看函数的调用顺序
+/*
+ClassVisitor2.visit(52, [ACC_PUBLIC], ClassTransformation/HelloWorld, null, java/lang/Object, []);
+ClassVisitor.visit(52, [ACC_PUBLIC], ClassTransformation/HelloWorld, null, java/lang/Object, []);
+ClassVisitor2.visitField([ACC_PUBLIC], intValue, I, null, null);
+ClassVisitor.visitField([ACC_PUBLIC], intValue, I, null, null);
+FieldVisitor2.visitEnd();
+FieldVisitor.visitEnd();
+ClassVisitor2.visitField([ACC_PUBLIC], strValue, Ljava/lang/String;, null, null);
+ClassVisitor.visitField([ACC_PUBLIC], strValue, Ljava/lang/String;, null, null);
+FieldVisitor2.visitEnd();
+FieldVisitor.visitEnd();
+ClassVisitor2.visitField([ACC_PUBLIC], testValue, Ljava/lang/String;, null, null);
+ClassVisitor.visitField([ACC_PUBLIC], testValue, Ljava/lang/String;, null, null);
+FieldVisitor2.visitEnd();
+FieldVisitor.visitEnd();
+ClassVisitor2.visitMethod([ACC_PUBLIC], <init>, ()V, null, null);
+ClassVisitor.visitMethod([ACC_PUBLIC], <init>, ()V, null, null);
+    MethodVisitor2.visitCode();
+    MethodVisitor.visitCode();
+    MethodVisitor2.visitVarInsn(ALOAD, 0);
+    MethodVisitor.visitVarInsn(ALOAD, 0);
+    MethodVisitor2.visitMethodInsn(INVOKESPECIAL, java/lang/Object, <init>, ()V, false);
+    MethodVisitor.visitMethodInsn(INVOKESPECIAL, java/lang/Object, <init>, ()V, false);
+    MethodVisitor2.visitInsn(RETURN);
+    MethodVisitor.visitInsn(RETURN);
+    MethodVisitor2.visitMaxs(1, 1);
+    MethodVisitor.visitMaxs(1, 1);
+    MethodVisitor2.visitEnd();
+    MethodVisitor.visitEnd();
+ClassVisitor2.visitMethod([ACC_PUBLIC], add, (II)I, null, null);
+ClassVisitor.visitMethod([ACC_PUBLIC], add, (II)I, null, null);
+    MethodVisitor2.visitCode();
+    MethodVisitor.visitCode();
+    MethodVisitor2.visitVarInsn(ILOAD, 1);
+    MethodVisitor.visitVarInsn(ILOAD, 1);
+    MethodVisitor2.visitVarInsn(ILOAD, 2);
+    MethodVisitor.visitVarInsn(ILOAD, 2);
+    MethodVisitor2.visitInsn(IADD);
+    MethodVisitor.visitInsn(IADD);
+    MethodVisitor2.visitInsn(IRETURN);
+    MethodVisitor.visitInsn(IRETURN);
+    MethodVisitor2.visitMaxs(2, 3);
+    MethodVisitor.visitMaxs(2, 3);
+    MethodVisitor2.visitEnd();
+    MethodVisitor.visitEnd();
+ClassVisitor2.visitMethod([ACC_PUBLIC], sub, (II)I, null, null);
+ClassVisitor.visitMethod([ACC_PUBLIC], sub, (II)I, null, null);
+    MethodVisitor2.visitCode();
+    MethodVisitor.visitCode();
+    MethodVisitor2.visitVarInsn(ILOAD, 1);
+    MethodVisitor.visitVarInsn(ILOAD, 1);
+    MethodVisitor2.visitVarInsn(ILOAD, 2);
+    MethodVisitor.visitVarInsn(ILOAD, 2);
+    MethodVisitor2.visitInsn(ISUB);
+    MethodVisitor.visitInsn(ISUB);
+    MethodVisitor2.visitInsn(IRETURN);
+    MethodVisitor.visitInsn(IRETURN);
+    MethodVisitor2.visitMaxs(2, 3);
+    MethodVisitor.visitMaxs(2, 3);
+    MethodVisitor2.visitEnd();
+    MethodVisitor.visitEnd();
+ClassVisitor2.visitEnd();
+ClassVisitor1.visitEnd();
+file:///Users/zhjwang/works/study/java-study/ASM-demo/learn-asm/target/classes/ClassTransformation/HelloWorld.class
+* */
 public class HelloWorldTransformCore {
     public static void main(String[] args) {
         String relative_path = "ClassTransformation/HelloWorld.class";
