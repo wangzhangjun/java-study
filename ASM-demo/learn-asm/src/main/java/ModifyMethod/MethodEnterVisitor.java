@@ -12,7 +12,7 @@ public class MethodEnterVisitor extends ClassVisitor {
     @Override
     public MethodVisitor visitMethod(int access, String name, String descriptor, String signature, String[] exceptions) {
         MethodVisitor mv = super.visitMethod(access, name, descriptor, signature, exceptions);
-        if (mv != null && !"<init>".equals(name)) {
+        if (mv != null && !"<init>".equals(name)) { // 过滤掉构造方法（init）
             mv = new MethodEnterAdapter(api, mv);
         }
         return mv;

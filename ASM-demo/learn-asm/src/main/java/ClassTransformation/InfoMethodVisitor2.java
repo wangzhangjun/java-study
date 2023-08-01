@@ -87,6 +87,7 @@ public class InfoMethodVisitor2 extends MethodVisitor {
         super.visitIincInsn(var, increment);
     }
 
+    // 因为Annotation总是优先于其他执行，所有可以在这里做一个flag，就可以依据annotation去不同方法的判断了
     @Override
     public AnnotationVisitor visitAnnotation(String descriptor, boolean visible) {
         System.out.println("    MethodVisitor2 visitAnnotation: " + descriptor);  // 作用在方法上的annotation只有在这里才会被调用
