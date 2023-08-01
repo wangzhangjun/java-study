@@ -1,5 +1,6 @@
 package ClassTransformation;
 
+import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.util.Printer;
@@ -84,6 +85,12 @@ public class InfoMethodVisitor2 extends MethodVisitor {
         String line = String.format("    MethodVisitor2.visitIincInsn(%s, %s);", var, increment);
         System.out.println(line);
         super.visitIincInsn(var, increment);
+    }
+
+    @Override
+    public AnnotationVisitor visitAnnotation(String descriptor, boolean visible) {
+        System.out.println("    MethodVisitor2 visitAnnotation: " + descriptor);  // 作用在方法上的annotation只有在这里才会被调用
+        return super.visitAnnotation(descriptor,visible);
     }
 
     @Override

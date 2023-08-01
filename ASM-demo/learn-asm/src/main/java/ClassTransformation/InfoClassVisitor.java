@@ -33,7 +33,7 @@ public class InfoClassVisitor extends ClassVisitor {
         String line = String.format("ClassVisitor.visitField(%s, %s, %s, %s, %s);", getAccess(access), name, descriptor, signature, value);
         System.out.println(line);
 
-//        return super.visitField(access, name, descriptor, signature, value);
+        //return super.visitField(access, name, descriptor, signature, value);
         FieldVisitor fv = super.visitField(access, name, descriptor, signature, value);
         return new InfoFieldVisitor(api, fv);  // 是否还要关注FieldVisitor的相关生命周期的函数
     }
@@ -45,6 +45,14 @@ public class InfoClassVisitor extends ClassVisitor {
 
         MethodVisitor mv = super.visitMethod(access, name, descriptor, signature, exceptions);
         return new InfoMethodVisitor(api, mv);
+    }
+
+    @Override
+    public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
+        System.out.println("ClassVisitorAnniton.visitAnnotation nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn"+desc);  // 这里不会被调用
+        //return super.visitAnnotation(desc, visible);
+        AnnotationVisitor av = super.visitAnnotation(desc, visible);
+        return new InfoAnnotationVisitor(api, av);  // 这里也不会被调用，在method的visitAnnotation里面才会调用对注解的处理
     }
 
     @Override

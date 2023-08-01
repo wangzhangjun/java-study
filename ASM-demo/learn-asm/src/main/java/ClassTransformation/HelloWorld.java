@@ -5,6 +5,7 @@ public class HelloWorld {
     public String strValue;
     public String testValue;
 
+    @TraceTest(tag = 32)
     public int add(int a, int b) {
         return a + b;
     }
