@@ -35,7 +35,7 @@ public class MethodEnterVisitor extends ClassVisitor {
 
         @Override
         public void visitInsn(int opcode) {
-            // 首先，处理自己的代码逻辑
+            // 首先，处理自己的代码逻辑 , 会默认给所有的方法在出去的时候都加上一个打印
             if (opcode == Opcodes.ATHROW || (opcode >= Opcodes.IRETURN && opcode <= Opcodes.RETURN)) {
                 super.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
                 super.visitLdcInsn("Method Exit...");
