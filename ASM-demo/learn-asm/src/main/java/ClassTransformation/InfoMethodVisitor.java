@@ -86,6 +86,7 @@ public class InfoMethodVisitor extends MethodVisitor {
         super.visitIincInsn(var, increment);
     }
 
+    //visitMaxs 标志着方法体的结束
     @Override
     public void visitMaxs(int maxStack, int maxLocals) {
         String line = String.format("    MethodVisitor.visitMaxs(%s, %s);", maxStack, maxLocals);
