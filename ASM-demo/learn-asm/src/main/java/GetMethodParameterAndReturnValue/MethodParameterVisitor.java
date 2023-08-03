@@ -78,6 +78,9 @@ public class MethodParameterVisitor extends ClassVisitor {
                     printDouble();
                 }
                 else if (sort == Type.OBJECT && "Ljava/lang/String;".equals(descriptor)) {
+                    super.visitInsn(DUP);
+                    super.visitInsn(DUP);
+                    super.visitMethodInsn(INVOKESTATIC, "GetMethodParameterAndReturnValue/TestCall", "testcallstring", "(Ljava/lang/String;)V", false);
                     printString();
                 }
                 else if (sort == Type.OBJECT) {
