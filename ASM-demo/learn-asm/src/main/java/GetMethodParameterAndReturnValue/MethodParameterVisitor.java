@@ -4,7 +4,6 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
-
 import static org.objectweb.asm.Opcodes.*;
 
 public class MethodParameterVisitor extends ClassVisitor {
@@ -59,6 +58,11 @@ public class MethodParameterVisitor extends ClassVisitor {
                     printChar();
                 }
                 else if (sort == Type.BYTE || sort == Type.SHORT || sort == Type.INT) {
+                    // 这么调用并传参是OK的，因为还要给后面用，所有要先把栈顶的元素用DUP搞一份
+                    // 为什么要DUP两次，因为printInt用一次，本身往下传还要用一次
+                    super.visitInsn(DUP);
+                    super.visitInsn(DUP);
+                    super.visitMethodInsn(INVOKESTATIC, "GetMethodParameterAndReturnValue/TestCall", "testcall", "(I)V", false);
                     printInt();
                 }
                 else if (sort == Type.FLOAT) {
