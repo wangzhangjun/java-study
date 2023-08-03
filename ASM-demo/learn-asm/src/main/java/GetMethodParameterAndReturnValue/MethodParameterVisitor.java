@@ -84,6 +84,9 @@ public class MethodParameterVisitor extends ClassVisitor {
                     printString();
                 }
                 else if (sort == Type.OBJECT) {
+                    super.visitInsn(DUP);
+                    super.visitInsn(DUP);
+                    super.visitMethodInsn(INVOKESTATIC, "GetMethodParameterAndReturnValue/TestCall", "testcallobject", "(Ljava/lang/Object;)V", false);
                     printObject();
                 }
                 else {

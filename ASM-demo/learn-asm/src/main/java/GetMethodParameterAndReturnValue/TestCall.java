@@ -12,4 +12,8 @@ public class TestCall {
     public static void  testcallstring(String a ){
         System.out.println("testcallstring() func:" + a);
     }
+
+    public static void  testcallobject(Object a ){
+        System.out.println("testcallsobject() func:" + a);
+    }
 }
