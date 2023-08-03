@@ -69,6 +69,9 @@ public class MethodParameterVisitor extends ClassVisitor {
                     printFloat();
                 }
                 else if (sort == Type.LONG) {
+                    super.visitInsn(DUP2);
+                    super.visitInsn(DUP2);
+                    super.visitMethodInsn(INVOKESTATIC, "GetMethodParameterAndReturnValue/TestCallLong", "testcalllong", "(J)V", false);
                     printLong();
                 }
                 else if (sort == Type.DOUBLE) {
