@@ -40,7 +40,8 @@ public class MethodParameterVisitor extends ClassVisitor {
             boolean isStatic = ((methodAccess & ACC_STATIC) != 0);
             int slotIndex = isStatic ? 0 : 1; // staic 在local varibale 中的slot不一样，非static的第一个slot存this
 
-            printMessage("Method Enter: " + methodName + methodDesc);
+            printMessage("Method Enter methodName : " + methodName);
+            printMessage("Method Enter methodDesc : " + methodDesc);
 
             Type methodType = Type.getMethodType(methodDesc);  // 获取方法的描述
             Type[] argumentTypes = methodType.getArgumentTypes();  // 用于获取“方法”接收的参数类型
