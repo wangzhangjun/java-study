@@ -1,4 +1,4 @@
-
+package basic
 fun main() {
     // 可变变量定义：var 关键字
     // var <标识符> : <类型> = <初始化值>

@@ -1,3 +1,5 @@
+package basic
+
 fun main() {
     val name1: String = "张三"
     val name2: String = "张三"

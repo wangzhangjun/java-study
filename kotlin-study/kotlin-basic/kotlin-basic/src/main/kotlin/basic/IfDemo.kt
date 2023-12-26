@@ -1,3 +1,5 @@
+package basic
+
 fun main() {
     val number1: Int = 9999999
     val number2: Int = 8888888

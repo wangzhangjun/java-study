@@ -1,4 +1,4 @@
-
+package basic
 fun main() {
     // $ 表示一个变量名或者变量值
     // $varName 表示变量值

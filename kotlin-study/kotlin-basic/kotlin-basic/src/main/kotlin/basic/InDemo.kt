@@ -1,4 +1,4 @@
-
+package basic
 fun main() {
 
     // 1 到 9

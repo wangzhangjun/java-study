@@ -1,3 +1,5 @@
+package basic
+
 fun main() {
     // 自定义标签
     tttt@ for (i in 1..20) {
@@ -10,7 +12,6 @@ fun main() {
         }
     }
 
-    // TODO 循环
     var items  = listOf<String>("李四", "张三", "王五")
     for (item in items) {
         println(item)
@@ -31,6 +32,6 @@ class Derry {
     fun show() {
         println(I)
         println(this.I)
-        println(this@Derry.I)
+        println(this@Derry.I)  // 自带标签
     }
 }
